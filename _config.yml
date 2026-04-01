@@ -5,61 +5,40 @@
 ##########
 
 ##########
-# URL VARIABLES [optional if using GitHub Pages!]
+# URL VARIABLES
 #
-# url is site domain, full URL to the production location of your collection
-# on GitHub Pages follows the pattern username.github.io
-#url: https://collectionbuilder.github.io 
-# baseurl is path to location on the domain if necessary e.g. /digital/hjccc
-# on GitHub Pages it is your github repository's name prefixed with a /
-#baseurl: /collectionbuilder-gh 
-# location of code, the full url to your github repository
-source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
+# url is your site domain. For GitHub Pages, it is your username.github.io
+url: "https://juanbardina.github.io"
+# baseurl is the path to your repository. It must match your repo name exactly.
+baseurl: "/Familia"
+# location of code
+source-code: https://github.com/juanbardina/Familia
 
 ##########
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: Bardina fotos 
-# tagline, a short phrase that will appear throughout the site in the top banner
-tagline: a template for creating simple digital exhibits
-# description appears in meta tags and other locations
-# this description might appear in search result lists, keep around 160 characters max
-description: "CollectionBuilder-GH is a template for creating small digital collection exhibits on GitHub Pages designed for teaching digital library skills"
-# creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: Juan_Bardina
+title: "Bardina fotos"
+# tagline appears throughout the site in the top banner
+tagline: "Family History Archive"
+# description appears in meta tags for search results
+description: "A digital archive of the Bardina family history and photographs."
+# creator of the digital collection
+author: "Juan Bardina"
 
 ##########
 # COLLECTION SETTINGS
 #
-# Set the metadata for your collection (the name of the csv file in your _data directory that describes the objects in your collection) 
-# Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
+# Point to your CSV file in the _data directory (without the .csv extension)
 metadata: metadata
-
-##########
-# Site/Organization Branding 
-#   Uncomment these and enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
-#
-# organization-name: "Center for Digital Inquiry and Learning (CDIL)"
-# organization-link: https://cdil.lib.uidaho.edu/
-# organization-logo-banner: https://cdil.lib.uidaho.edu/storying-extinction/assets/img/cdil.png
-# organization-logo-nav: https://cdil.lib.uidaho.edu/assets/img/logo.png
-
-##########
-# ROBOTS EXCLUDE
-#
-# set noindex to true if you do NOT want Google to index your site
-# noindex: true 
 
 ##########
 # BUILD SETTINGS 
 #
-# Note: use environment variable on build command to include analytics
-# JEKYLL_ENV=production jekyll build
-# (this is done automatically by gh-pages build)
-#
-# ignore stuff
-exclude: [docs/, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md]
+# This section tells Jekyll which files to ignore to prevent build errors.
+# We include 'vendor' and 'docs' to stop the "Invalid Date" exit code 1 error.
+exclude: [docs/, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md, vendor, Gemfile, Gemfile.lock, .github]
+
 # compress CSS output
 sass:
   style: compressed
