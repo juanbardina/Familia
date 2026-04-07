@@ -1,18 +1,22 @@
 ---
-# Default home page with boxes providing collection stats
+# Full-width home page with large carousel
 layout: page
 ---
 <div class="row">
 
-  <div class="col-md-12 mb-4">
-    {% include index/carousel.html title="Sample Items" height="500" %}
+  <div class="col-md-12 mb-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        {% include index/carousel.html title="Sample Items" height="700" %}
+      </div>
+    </div>
   </div>
   
-  <div class="col-md-6">  
+  <div class="col-md-6 mb-3">  
     {% include index/time.html %}
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-6 mb-3">
     {% include index/objects.html %}
   </div>
   
